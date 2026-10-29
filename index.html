@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genny Lou D. Diaz | Senior QA Tester & Application Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0B1120',
+                            card: '#1E293B',
+                            border: '#334155',
+                            cyan: '#06B6D4',
+                            glow: '#22D3EE',
+                            pink: '#F43F5E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B1120;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06B6D4;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+        }
+        .glow-effect-hover:hover {
+            box-shadow: 0 0 30px 0px rgba(6, 182, 212, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-cyan selection:text-slate-900">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#about" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan to-blue-600 flex items-center justify-center font-bold text-slate-900 text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    GD
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-white block leading-tight">Genny Lou Diaz</span>
+                    <span class="text-xs text-brand-cyan font-mono">QA.Dev.Creatives</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="text-slate-300 hover:text-brand-cyan transition-colors">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-brand-cyan transition-colors">Skill Matrix</a>
+                <a href="#experience" class="text-slate-300 hover:text-brand-cyan transition-colors">Experience</a>
+                <!-- <a href="#services" class="text-slate-300 hover:text-brand-cyan transition-colors">Calculator</a> -->
+                <a href="#projects" class="text-slate-300 hover:text-brand-cyan transition-colors">Case Studies</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <!-- <a href="#calculator" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg border border-brand-cyan text-brand-cyan hover:bg-brand-cyan/10 transition-colors"> -->
+                    <!-- Estimate Project -->
+                <!-- </a> -->
+                <a href="#contact" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-brand-cyan text-slate-950 hover:bg-brand-glow transition-colors font-bold shadow-md">
+                    Hire Me
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block py-2 text-slate-300 hover:text-brand-cyan">About</a>
+            <a href="#skills" class="mobile-link block py-2 text-slate-300 hover:text-brand-cyan">Skill Matrix</a>
+            <a href="#experience" class="mobile-link block py-2 text-slate-300 hover:text-brand-cyan">Experience</a>
+            <a href="#services" class="mobile-link block py-2 text-slate-300 hover:text-brand-cyan">Service Estimator</a>
+            <a href="#projects" class="mobile-link block py-2 text-slate-300 hover:text-brand-cyan">Case Studies</a>
+            <a href="#contact" class="mobile-link block py-2 text-slate-300 hover:text-brand-cyan">Contact & Hire</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="about" class="relative pt-12 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
+            <!-- Background Accent Blurs -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-card border border-brand-border text-xs font-mono text-brand-cyan">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Available for WFH & Freelance Contracts
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                            Quality Assurance Tester & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-400">Application Developer</span>
+                        </h1>
+                        
+                        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                            6+ Years driving end-to-end software stability for high-security banking systems (BPI) & global mobile app ecosystems (Huawei AppGallery 2,000+ apps). Combining technical precision with creative problem solving.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                            <!-- <a href="#services" class="px-6 py-3.5 rounded-xl bg-brand-cyan text-slate-950 font-bold hover:bg-brand-glow transition-all shadow-lg glow-effect-hover flex items-center gap-2 text-sm"> -->
+                                <!-- <i class="fa-solid fa-calculator"></i> -->
+                                <!-- Calculate Audit Cost -->
+                            <!-- </a> -->
+                            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-brand-card border border-brand-border text-white font-medium hover:border-brand-cyan transition-all flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Hire Me
+                            </a>
+                            <button onclick="downloadResumeModal()" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium transition-all flex items-center gap-2 text-sm border border-slate-700">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                Resume PDF
+                            </button>
+                        </div>
+
+                        <!-- Highlights Stats Badges -->
+                        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-border/60 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-extrabold text-white">6+ Yrs</span>
+                                <span class="text-xs text-slate-400">QA & Software Dev</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-extrabold text-brand-cyan">2,000+</span>
+                                <span class="text-xs text-slate-400">App Audits (Huawei)</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-extrabold text-emerald-400">99.9%</span>
+                                <span class="text-xs text-slate-400">Backend Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Visual Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md bg-brand-card rounded-2xl p-6 border border-brand-border shadow-2xl glow-effect">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-cyan to-indigo-600 flex items-center justify-center text-white text-2xl font-bold">
+                                    GLD
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Genny Lou D. Diaz</h3>
+                                    <p class="text-xs text-slate-400">Las Piñas City, Philippines</p>
+                                    <div class="mt-1 flex items-center gap-2">
+                                        <span class="inline-block px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-semibold border border-emerald-500/20">
+                                            BPI & Huawei Alum
+                                        </span>
+                                        <!-- <span class="inline-block px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[10px] font-semibold border border-amber-500/20"> -->
+                                            <!-- TESDA Baker -->
+                                        <!-- </span> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terminal-style summary -->
+                            <div class="bg-brand-dark rounded-xl p-4 font-mono text-xs text-slate-300 space-y-2 border border-slate-800">
+                                <div class="flex items-center justify-between text-slate-500 pb-2 border-b border-slate-800">
+                                    <span>profile_summary.sh</span>
+                                    <i class="fa-solid fa-terminal"></i>
+                                </div>
+                                <p><span class="text-brand-cyan">&gt; Role:</span> Senior QA Specialist & Dev</p>
+                                <p><span class="text-brand-cyan">&gt; Tech Stack:</span> JS, TS, SQL, RoR, REST APIs</p>
+                                <p><span class="text-brand-cyan">&gt; Testing:</span> Manual, Reg, UAT, Performance</p>
+                                <p><span class="text-brand-cyan">&gt; Extra:</span> Interactive Design</p>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between text-xs text-slate-400">
+                                <span><i class="fa-solid fa-envelope text-brand-cyan mr-1"></i> diazgennylou@gmail.com</span>
+                                <span><i class="fa-solid fa-phone text-brand-cyan mr-1"></i> 09453128543</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Matrix Section -->
+        <section id="skills" class="py-16 bg-brand-card/40 border-y border-brand-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Technical Competencies</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Interactive Skill Matrix</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Filter through my technical stack spanning QA Engineering, Web Development, DevOps tools, and Design.</p>
+                </div>
+
+                <!-- Skill Filters -->
+                <div class="flex flex-wrap justify-center gap-2 mb-10" id="skill-filters">
+                    <button onclick="filterSkills('all')" class="skill-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-brand-cyan text-slate-950 transition-all">All Skills</button>
+                    <button onclick="filterSkills('qa')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card border border-brand-border text-slate-300 hover:border-brand-cyan transition-all">QA & Testing</button>
+                    <button onclick="filterSkills('dev')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card border border-brand-border text-slate-300 hover:border-brand-cyan transition-all">Development</button>
+                    <button onclick="filterSkills('tools')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card border border-brand-border text-slate-300 hover:border-brand-cyan transition-all">DevOps & Tools</button>
+                    <button onclick="filterSkills('other')" class="skill-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-card border border-brand-border text-slate-300 hover:border-brand-cyan transition-all">Design & Other</button>
+                </div>
+
+                <!-- Skill Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="skill-grid">
+                    <!-- Dynamic Skill Items loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Timeline -->
+        <section id="experience" class="py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Career Journey</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Professional Experience</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Proven track record across leading banks, global tech giants, and educational institutions.</p>
+                </div>
+
+                <div class="relative border-l-2 border-brand-border pl-6 sm:pl-8 space-y-12 ml-2 sm:ml-6">
+                    
+                    <!-- BPI Role -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-brand-dark border-2 border-brand-cyan group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="text-lg font-bold text-white">Bank of the Philippine Islands (BPI)</h4>
+                                <span class="px-3 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan text-xs font-mono font-medium">05/2025 - 06/2026</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-slate-300 mb-3">Junior Quality Assurance Tester • Makati, Philippines</h5>
+                            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                                <li>Executed end-to-end manual, functional, and regression testing for high-security banking applications.</li>
+                                <li>Led defect reporting and meticulous re-testing cycles during User Acceptance Testing (UAT).</li>
+                                <li>Managed daily status reporting for full testing lifecycle including test case creation and scripting.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Huawei Role -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-brand-dark border-2 border-brand-cyan group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="text-lg font-bold text-white">Huawei Philippines</h4>
+                                <span class="px-3 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan text-xs font-mono font-medium">05/2022 - 05/2024</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-slate-300 mb-3">QA Operations & Ecosystem Specialist • Taguig City, Philippines</h5>
+                            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                                <li>Led end-to-end QA lifecycle for Huawei AppGallery; ensured integration & stability of 2,000+ apps.</li>
+                                <li>Primary technical contact for enterprise partners (e.g., Home Credit) resolving payment API & OAuth blockers.</li>
+                                <li>Led monthly regression, usability, and performance audits across 20+ mobile & tablet devices.</li>
+                                <li>Translated technical bugs into visual SOPs reducing developer resolution time.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Directories Philippines -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-brand-dark border-2 border-brand-cyan group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="text-lg font-bold text-white">Directories of the Philippines</h4>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-mono font-medium">01/2020 - 07/2022</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-slate-300 mb-3">Application Developer • Makati City, Philippines</h5>
+                            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                                <li>Maintained large-scale Ruby on Rails infrastructure (MVC architecture) achieving 99.9% uptime.</li>
+                                <li>Enhanced backend security & data integrity using Regex validation logic.</li>
+                                <li>Optimized continuous deployment pipelines in Agile/Scrum environments using Ubuntu & Git.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- One Hundred Services -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-brand-dark border-2 border-brand-cyan group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="text-lg font-bold text-white">One Hundred Services Inc. & DPC</h4>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-mono font-medium">07/2019 - 03/2020</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-slate-300 mb-3">Technical QA & Product Support • Makati City, Philippines</h5>
+                            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                                <li>Authored test plans & scripts for iOS, Android, and cross-browser web applications.</li>
+                                <li>Monitored quality metrics using Redmine and conducted Training Needs Analysis (TNA).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Arellano Teacher -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-brand-dark border-2 border-brand-cyan group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h4 class="text-lg font-bold text-white">Arellano University</h4>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-mono font-medium">07/2018 - 07/2019</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-slate-300 mb-3">ICT Teacher & Graphic Designer • Pasay City, Philippines</h5>
+                            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                                <li>Instructed Media Information Literacy, Graphic Design, HTML/CSS, and Photoshop Animation.</li>
+                                <li>Managed department databases and student information records, including data entry using LMS tool.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Offerings & Interactive Calculator -->
+        <!-- <section id="services" class="py-20 bg-brand-card/30 border-y border-brand-border"> -->
+            <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> -->
+                <!-- <div class="text-center max-w-2xl mx-auto mb-16"> -->
+                    <!-- <h2 class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Monetization & Services</h2> -->
+                    <!-- <h3 class="text-3xl font-extrabold text-white">Service Estimator & Offerings</h3> -->
+                    <!-- <p class="text-slate-400 mt-2 text-sm">Select services below to calculate an instant estimated quote for your project.</p> -->
+                <!-- </div> -->
+
+                <!-- <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"> -->
+<!--                      -->
+                    <!-- Interactive Selection Form -->
+                    <!-- <div class="lg:col-span-7 bg-brand-card rounded-2xl p-6 sm:p-8 border border-brand-border space-y-6"> -->
+                        <!-- <h4 class="text-lg font-bold text-white flex items-center gap-2"> -->
+                            <!-- <i class="fa-solid fa-list-check text-brand-cyan"></i> Choose Required Services -->
+                        <!-- </h4> -->
+
+                        <!-- <div class="space-y-4"> -->
+                            <!-- Option 1 -->
+                            <!-- <label class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark/60 border border-brand-border hover:border-brand-cyan cursor-pointer transition-colors"> -->
+                                <!-- <input type="checkbox" class="service-calc-checkbox mt-1 rounded bg-slate-800 border-slate-700 text-brand-cyan focus:ring-0" value="150" data-name="Full App QA Audit"> -->
+                                <!-- <div class="flex-grow"> -->
+                                    <!-- <div class="flex justify-between items-center"> -->
+                                        <!-- <span class="font-semibold text-white text-sm">Full Mobile/Web App QA Audit</span> -->
+                                        <!-- <span class="text-brand-cyan font-mono text-sm font-bold">$150</span> -->
+                                    <!-- </div> -->
+                                    <!-- <p class="text-xs text-slate-400 mt-1">Cross-browser & cross-device bug sweep, regression testing, and comprehensive issue report.</p> -->
+                                <!-- </div> -->
+                            <!-- </label> -->
+
+                            <!-- Option 2 -->
+                            <!-- <label class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark/60 border border-brand-border hover:border-brand-cyan cursor-pointer transition-colors"> -->
+                                <!-- <input type="checkbox" class="service-calc-checkbox mt-1 rounded bg-slate-800 border-slate-700 text-brand-cyan focus:ring-0" value="120" data-name="API & Payment Integration Testing"> -->
+                                <!-- <div class="flex-grow"> -->
+                                    <!-- <div class="flex justify-between items-center"> -->
+                                        <!-- <span class="font-semibold text-white text-sm">API & Payment Gateway Testing</span> -->
+                                        <!-- <span class="text-brand-cyan font-mono text-sm font-bold">$120</span> -->
+                                    <!-- </div> -->
+                                    <!-- <p class="text-xs text-slate-400 mt-1">Validation for checkout flows, payment APIs (Home Credit/GCash), and OAuth/login systems.</p> -->
+                                <!-- </div> -->
+                            <!-- </label> -->
+
+                            <!-- Option 3 -->
+                            <!-- <label class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark/60 border border-brand-border hover:border-brand-cyan cursor-pointer transition-colors"> -->
+                                <!-- <input type="checkbox" class="service-calc-checkbox mt-1 rounded bg-slate-800 border-slate-700 text-brand-cyan focus:ring-0" value="90" data-name="SOP & Visual Bug Documentation"> -->
+                                <!-- <div class="flex-grow"> -->
+                                    <!-- <div class="flex justify-between items-center"> -->
+                                        <!-- <span class="font-semibold text-white text-sm">SOP & Visual Bug Documentation</span> -->
+                                        <!-- <span class="text-brand-cyan font-mono text-sm font-bold">$90</span> -->
+                                    <!-- </div> -->
+                                    <!-- <p class="text-xs text-slate-400 mt-1">High-fidelity visual reports, step-by-step reproduction guides, and technical SOP creation.</p> -->
+                                <!-- </div> -->
+                            <!-- </label> -->
+
+                            <!-- Option 4 -->
+                            <!-- <label class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark/60 border border-brand-border hover:border-brand-cyan cursor-pointer transition-colors"> -->
+                                <!-- <input type="checkbox" class="service-calc-checkbox mt-1 rounded bg-slate-800 border-slate-700 text-brand-cyan focus:ring-0" value="75" data-name="Custom Artisan Bakery Order"> -->
+                                <!-- <div class="flex-grow"> -->
+                                    <!-- <div class="flex justify-between items-center"> -->
+                                        <!-- <span class="font-semibold text-white text-sm">Custom Artisan Bakery Batch (TESDA Certified)</span> -->
+                                        <!-- <span class="text-amber-400 font-mono text-sm font-bold">₱1,500 (~$30)</span> -->
+                                    <!-- </div> -->
+                                    <!-- <p class="text-xs text-slate-400 mt-1">Pre-order artisan bread, pastries, or dessert catering for local events/celebrations.</p> -->
+                                <!-- </div> -->
+                            <!-- </label> -->
+                        <!-- </div> -->
+
+                        <!-- Turnaround Speed Selector -->
+                        <!-- <div class="pt-4 border-t border-brand-border"> -->
+                            <!-- <label class="block text-xs font-semibold text-slate-300 mb-2">Turnaround Urgency</label> -->
+                            <!-- <select id="urgency-select" class="w-full bg-brand-dark border border-brand-border rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-brand-cyan"> -->
+                                <!-- <option value="1">Standard Speed (3 - 5 Business Days)</option> -->
+                                <!-- <option value="1.3">Express Priority (24 - 48 Hours) [+30%]</option> -->
+                            <!-- </select> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+
+                    <!-- Calculator Summary Card -->
+                    <!-- <div class="lg:col-span-5 bg-brand-card rounded-2xl p-6 sm:p-8 border border-brand-border sticky top-28 shadow-xl"> -->
+                        <!-- <h4 class="text-lg font-bold text-white mb-4 flex items-center justify-between"> -->
+                            <!-- <span>Cost Breakdown</span> -->
+                            <!-- <i class="fa-solid fa-calculator text-brand-cyan"></i> -->
+                        <!-- </h4> -->
+
+                        <!-- <div id="summary-list" class="space-y-3 text-xs text-slate-400 min-h-[120px] pb-4 border-b border-brand-border"> -->
+                            <!-- <p class="italic text-slate-500">No services selected yet. Check boxes on the left to build your estimate.</p> -->
+                        <!-- </div> -->
+
+                        <!-- <div class="pt-4 space-y-2"> -->
+                            <!-- <div class="flex justify-between text-xs text-slate-400"> -->
+                                <!-- <span>Subtotal</span> -->
+                                <!-- <span id="calc-subtotal" class="font-mono text-white">$0.00</span> -->
+                            <!-- </div> -->
+                            <!-- <div class="flex justify-between text-xs text-slate-400"> -->
+                                <!-- <span>Rush Multiplier</span> -->
+                                <!-- <span id="calc-urgency" class="font-mono text-white">1.0x</span> -->
+                            <!-- </div> -->
+                            <!-- <div class="flex justify-between items-center pt-3 border-t border-brand-border text-base font-bold text-white"> -->
+                                <!-- <span>Estimated Total:</span> -->
+                                <!-- <span id="calc-total" class="text-2xl font-extrabold text-brand-cyan font-mono">$0.00</span> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+
+                        <!-- <button onclick="requestQuote()" class="w-full mt-6 py-3.5 px-4 rounded-xl bg-brand-cyan text-slate-950 font-bold hover:bg-brand-glow transition-all shadow-md text-sm"> -->
+                            <!-- Request Official Quote -->
+                        <!-- </button> -->
+                    <!-- </div> -->
+
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </section> -->
+
+        <!-- Projects & Case Studies Showcase -->
+        <section id="projects" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Featured Projects</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Case Studies & Audits</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Highlights from enterprise QA cycles, Ruby on Rails development, and technical visual reports.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-brand-cyan/50 transition-all group flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-brand-cyan flex items-center justify-center mb-4 text-lg">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors">BPI Banking Mobile UAT Audit</h4>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed">End-to-end security & regression testing suite executed for core banking apps, prioritizing user data integrity and zero critical bugs on release.</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <button onclick="openModal('bpi')" class="text-xs font-semibold text-brand-cyan hover:underline flex items-center gap-1">
+                                View Audit Breakdown <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-brand-cyan/50 transition-all group flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4 text-lg">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors">Huawei AppGallery QA Standard</h4>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed">Managed release readiness for over 2,000 applications, resolving API payment blockers and establishing standardized visual bug reports.</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <button onclick="openModal('huawei')" class="text-xs font-semibold text-brand-cyan hover:underline flex items-center gap-1">
+                                View Case Study <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-brand-cyan/50 transition-all group flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 text-lg">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors">High-Traffic Ad Platform Engine</h4>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed">Built and maintained backend architectures using Ruby on Rails, MVC patterns, and Regex data validation with 99.9% uptime.</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <button onclick="openModal('rails')" class="text-xs font-semibold text-brand-cyan hover:underline flex items-center gap-1">
+                                View Architecture <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Hire Form -->
+        <section id="contact" class="py-20 bg-brand-card/20 border-t border-brand-border">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Get In Touch</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Let's Work Together</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Have a QA contract, freelance dev project, or job offer? Drop a message below.</p>
+                </div>
+
+                <div class="bg-brand-card rounded-2xl p-6 sm:p-10 border border-brand-border shadow-2xl">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" action="https://formspree.io/f/mzednwkz" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Your Name</label>
+                                <input type="text" required placeholder="John Doe" class="w-full bg-brand-dark border border-brand-border rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-brand-cyan">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Email Address</label>
+                                <input type="email" name="email"required placeholder="john@example.com" class="w-full bg-brand-dark border border-brand-border rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-brand-cyan">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Inquiry Type</label>
+                            <select class="w-full bg-brand-dark border border-brand-border rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-brand-cyan">
+                                <option>QA / Software Testing Contract</option>
+                                <option>Web / App Development Project</option>
+                                <option>Full-Time WFH Job Offer</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Message & Details</label>
+                            <textarea rows="4" required placeholder="Describe your project, timeline, or requirements..." class="w-full bg-brand-dark border border-brand-border rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-brand-cyan"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-cyan text-slate-950 font-bold hover:bg-brand-glow transition-all text-sm shadow-md">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monetization Support Banner -->
+        <section class="py-12 bg-slate-900 border-t border-brand-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <!-- <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-400"> -->
+                    <!-- <i class="fa-solid fa-heart text-brand-pink"></i> Direct Support & Tips -->
+                <!-- </div> -->
+                <h4 class="text-xl font-bold text-white">Support My Tech & Creative Journey</h4>
+                <p class="text-xs text-slate-400 max-w-xl mx-auto">If my QA resources, open-source code, or technical advice helped you, feel free to support or connect directly via </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.linkedin.com/in/gennyloudiaz" class="px-5 py-2.5 rounded-xl bg-blue-500 text-white font-bold hover:bg-blue-400 transition-colors text-xs flex items-center gap-2" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                </div>
+                <!-- <div class="flex flex-wrap justify-center gap-4"> -->
+                    <!-- <button onclick="showTipModal()" class="px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition-colors text-xs flex items-center gap-2"> -->
+                        <!-- <i class="fa-solid fa-mug-hot"></i> Buy Me a Coffee -->
+                    <!-- </button> -->
+                    <!-- <button onclick="showTipModal()" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-colors text-xs flex items-center gap-2"> -->
+                        <!-- <i class="fa-solid fa-qrcode"></i> GCash / Bank Tip -->
+                    <!-- </button> -->
+                <!-- </div> -->
+
+                <!-- AdSense Placeholder Slot for Passive Monetization -->
+                <div class="mt-8 p-4 bg-brand-dark/50 border border-dashed border-slate-800 rounded-xl max-w-2xl mx-auto text-[10px] text-slate-600 font-mono">
+                    [ Google AdSense Banner Placeholder Slot ]
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-brand-border py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 Genny Lou D. Diaz. All Rights Reserved.</p>
+            <p class="mt-1">Senior QA Specialist • Application Developer • Creatives</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-cyan text-slate-950 px-5 py-3 rounded-xl font-bold text-xs shadow-2xl flex items-center gap-2 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-base"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Case Study Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-brand-card border border-brand-border rounded-2xl max-w-xl w-full p-6 space-y-4 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 id="modal-title" class="text-lg font-bold text-white">Project Detail</h3>
+            <div id="modal-body" class="text-xs text-slate-300 space-y-3">
+                <!-- Loaded dynamically -->
+            </div>
+            <div class="pt-4 border-t border-brand-border flex justify-end">
+                <button onclick="closeModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Skills Data Array
+        const skillsData = [
+            { name: "Manual Testing", category: "qa", level: "95%", icon: "fa-vial" },
+            { name: "Regression Testing", category: "qa", level: "95%", icon: "fa-rotate-left" },
+            { name: "UAT Management", category: "qa", level: "90%", icon: "fa-user-check" },
+            { name: "API Testing (Postman)", category: "qa", level: "85%", icon: "fa-network-wired" },
+            { name: "Javascript / Typescript", category: "dev", level: "80%", icon: "fa-code" },
+            { name: "Ruby on Rails", category: "dev", level: "75%", icon: "fa-gem" },
+            { name: "HTML / CSS / Tailwind", category: "dev", level: "90%", icon: "fa-layer-group" },
+            { name: "SQL & Databases", category: "dev", level: "80%", icon: "fa-database" },
+            { name: "DevOps Azure Tools", category: "tools", level: "75%", icon: "fa-cloud" },
+            { name: "Git / GitLab", category: "tools", level: "85%", icon: "fa-code-branch" },
+            { name: "CMS Platforms", category: "tools", level: "85%", icon: "fa-cubes" },
+            { name: "UI/UX & Visual Reports", category: "other", level: "90%", icon: "fa-palette" },
+            { name: "TESDA Baking & Pastry", category: "other", level: "100%", icon: "fa-wheat-awn" }
+        ];
+
+        // Load Skill Matrix
+        function renderSkills(filter = 'all') {
+            const grid = document.getElementById('skill-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? skillsData 
+                : skillsData.filter(s => s.category === filter);
+
+            filtered.forEach(skill => {
+                const card = document.createElement('div');
+                card.className = "bg-brand-card p-4 rounded-xl border border-brand-border space-y-2 hover:border-brand-cyan/50 transition-colors";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold text-white flex items-center gap-2">
+                            <i class="fa-solid ${skill.icon} text-brand-cyan"></i> ${skill.name}
+                        </span>
+                        <span class="text-[10px] font-mono text-brand-cyan">${skill.level}</span>
+                    </div>
+                    <div class="w-full bg-brand-dark rounded-full h-1.5 overflow-hidden">
+                        <div class="bg-brand-cyan h-1.5 rounded-full" style="width: ${skill.level}"></div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterSkills(cat) {
+            document.querySelectorAll('#skill-filters button').forEach(btn => {
+                btn.classList.remove('bg-brand-cyan', 'text-slate-950');
+                btn.classList.add('bg-brand-card', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-brand-card', 'text-slate-300');
+            event.target.classList.add('bg-brand-cyan', 'text-slate-950');
+            renderSkills(cat);
+        }
+
+        // Service Calculator Logic
+        function updateCalculator() {
+            const checkboxes = document.querySelectorAll('.service-calc-checkbox');
+            const urgency = parseFloat(document.getElementById('urgency-select').value);
+            const summaryList = document.getElementById('summary-list');
+            
+            let subtotal = 0;
+            summaryList.innerHTML = '';
+
+            let count = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    count++;
+                    const price = parseFloat(cb.value);
+                    const name = cb.getAttribute('data-name');
+                    subtotal += price;
+
+                    const item = document.createElement('div');
+                    item.className = "flex justify-between items-center text-white";
+                    item.innerHTML = `<span>${name}</span><span class="font-mono">$${price.toFixed(2)}</span>`;
+                    summaryList.appendChild(item);
+                }
+            });
+
+            if (count === 0) {
+                summaryList.innerHTML = '<p class="italic text-slate-500">No services selected yet. Check boxes on the left to build your estimate.</p>';
+            }
+
+            const total = subtotal * urgency;
+
+            document.getElementById('calc-subtotal').innerText = `$${subtotal.toFixed(2)}`;
+            document.getElementById('calc-urgency').innerText = `${urgency}x`;
+            document.getElementById('calc-total').innerText = `$${total.toFixed(2)}`;
+        }
+
+        document.querySelectorAll('.service-calc-checkbox').forEach(cb => {
+            cb.addEventListener('change', updateCalculator);
+        });
+        document.getElementById('urgency-select').addEventListener('change', updateCalculator);
+
+        // Toast Notification Helper
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function requestQuote() {
+            showToast("Estimate generated! Scroll to contact form to submit.");
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast("Inquiry received! Genny will respond within 24 hours.");
+            e.target.reset();
+        }
+
+        // Modal Functionality
+        function openModal(type) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+
+            if (type === 'bpi') {
+                title.innerText = "BPI Banking Mobile UAT Audit";
+                body.innerHTML = `
+                    <p><strong>Scope:</strong> Financial system security, transaction logging, and core mobile banking flows.</p>
+                    <p><strong>Methodology:</strong> Manual regression testing, edge-case validation </p>
+                    <p><strong>Outcome:</strong> Ensured 100% compliance with strict financial data integrity standards prior to production deployment.</p>
+                `;
+            } else if (type === 'huawei') {
+                title.innerText = "Huawei AppGallery Ecosystem Audit";
+                body.innerHTML = `
+                    <p><strong>Scope:</strong> Stability and payment gateway integration for over 2,000 Android apps.</p>
+                    <p><strong>Key Achievement:</strong> Resolved critical payment API blockers between local partners (Home Credit) in detailed bug ticketing on Azure DevOps and HQ engineering teams in China.</p>
+                    <p><strong>Visual SOPs:</strong> Created visual bug reports that reduced issue resolution time significantly.</p>
+                `;
+            } else if (type === 'rails') {
+                title.innerText = "Ruby on Rails Infrastructure";
+                body.innerHTML = `
+                    <p><strong>Scope:</strong> High-traffic advertising directory platform built using Rails MVC architecture.</p>
+                    <p><strong>Tech Stack:</strong> Ruby on Rails, Ubuntu, Git, PostgreSQL, Regex logic.</p>
+                    <p><strong>Uptime:</strong> Maintained 99.9% uptime while rapidly scaling backend security.</p>
+                `;
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        function downloadResumeModal() {
+            showToast("Resume download link initialized!");
+            const link = document.createElement('a');
+            link.href = 'C:\\Users\\Diaz\\gennywebsite\\GennyLouDDiaz .pdf';
+            link.download = 'My_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // function showTipModal() {
+            // showToast("Tip modal option triggered! Send to GCash: 09453128543");
+        // }
+
+        // Mobile Menu Drawer Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize Skill Grid
+        renderSkills('all');
+    </script>
+</body>
+</html>
